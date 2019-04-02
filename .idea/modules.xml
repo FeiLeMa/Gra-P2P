@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Gra-P2P.iml" filepath="$PROJECT_DIR$/.idea/Gra-P2P.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/all-api/all-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/all-api/all-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/app-bid.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-bid/app-bid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/app-loan.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/app-loan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/app-pay.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-pay/app-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/app-timer.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-timer/app-timer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-user/app-user.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-user/app-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-web/app-web.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-web/app-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-api/bid-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-api/bid-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-feign/bid-feign.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-feign/bid-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-server/bid-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-server/bid-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-core/business-core.iml" filepath="$PROJECT_DIR$/p2p-business/business-core/business-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/business-module.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/business-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-platform/config-server/config-server.iml" filepath="$PROJECT_DIR$/p2p-platform/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-platform/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/p2p-platform/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/load-feignClient.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/load-feignClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-api/loan-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-api/loan-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-server/loan-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-server/loan-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-platform/mybatis-generate/mybatis-generate.iml" filepath="$PROJECT_DIR$/p2p-platform/mybatis-generate/mybatis-generate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/p2p-business.iml" filepath="$PROJECT_DIR$/p2p-business/p2p-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-api/pay-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-api/pay-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-feign/pay-feign.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-feign/pay-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-server/pay-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-server/pay-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-api/timer-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-api/timer-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-feign/timer-feign.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-feign/timer-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-server/timer-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-server/timer-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-api/user-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-user/user-api/user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-feign/user-feign.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-user/user-feign/user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-server/user-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-user/user-server/user-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-web/web-api/web-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-web/web-api/web-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-web/web-server/web-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-web/web-server/web-server.iml" />
+    </modules>
+  </component>
+</project>

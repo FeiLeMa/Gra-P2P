@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://149.248.21.17:8761/eureka
+server:
+  port: 8888
+spring:
+  application:
+    name: config-api
+  profiles:
+    active: native
+  security:
+    user:
+      name: admin
+      password: admin
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config

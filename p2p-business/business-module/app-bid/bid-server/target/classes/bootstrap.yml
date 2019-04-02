@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: app-bid
+  profiles:
+    active: dev
+  cloud:
+    config:
+      profile: dev
+      name: app-public,app-bid
+      url: http://127.0.0.1:8888
+      fail-fast: true
+      username: admin
+      password: admin
+
+
+
+
+
+

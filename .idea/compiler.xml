@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="all-api" />
+        <module name="bid-api" />
+        <module name="bid-feign" />
+        <module name="bid-server" />
+        <module name="business-core" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="load-feignClient" />
+        <module name="loan-api" />
+        <module name="loan-server" />
+        <module name="mybatis-generate" />
+        <module name="pay-api" />
+        <module name="pay-feign" />
+        <module name="pay-server" />
+        <module name="timer-api" />
+        <module name="timer-feign" />
+        <module name="timer-server" />
+        <module name="user-api" />
+        <module name="user-feign" />
+        <module name="user-server" />
+        <module name="web-api" />
+        <module name="web-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="all-api" target="1.8" />
+      <module name="app-bid" target="1.8" />
+      <module name="app-loan" target="1.8" />
+      <module name="app-pay" target="1.8" />
+      <module name="app-timer" target="1.8" />
+      <module name="app-user" target="1.8" />
+      <module name="app-web" target="1.8" />
+      <module name="bid-api" target="1.8" />
+      <module name="bid-feign" target="1.8" />
+      <module name="bid-server" target="1.8" />
+      <module name="business-core" target="1.8" />
+      <module name="business-module" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="load-feignClient" target="1.8" />
+      <module name="loan-api" target="1.8" />
+      <module name="loan-server" target="1.8" />
+      <module name="mybatis-generate" target="1.5" />
+      <module name="p2p-business" target="1.8" />
+      <module name="pay-api" target="1.8" />
+      <module name="pay-feign" target="1.8" />
+      <module name="pay-server" target="1.8" />
+      <module name="timer-api" target="1.8" />
+      <module name="timer-feign" target="1.8" />
+      <module name="timer-server" target="1.8" />
+      <module name="user-api" target="1.8" />
+      <module name="user-feign" target="1.8" />
+      <module name="user-server" target="1.8" />
+      <module name="web-api" target="1.8" />
+      <module name="web-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/p2p-business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/all-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-bid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-bid/bid-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-loan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-pay/pay-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-timer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-user/user-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-web/web-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-business/business-module/app-web/web-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-platform" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-platform/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-platform/eureka-server" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--head-->
+<div th:fragment="header">
+    <script type="text/javascript">
+        //我要投资下拉
+        $(function () {
+            $(".headBody .main-nav li:eq(1)").hover(function () {
+                $(this).children(".menu-drop").stop(false, true).fadeIn();
+            }, function () {
+                $(this).children(".menu-drop").stop(false, true).hide();
+            });
+        });
+    </script>
+    <!--页头start-->
+    <a id="top"></a>
+    <div class="headBody" id="headBody">
+        <div class="header">
+            <div class="mainBox clearfix">
+                <div class="head_l"><span>客服电话：400-8080-105</span><em></em><a href="http://weibo.com/bjpowernode"
+                                                                              target="_blank" class="weibo"></a></div>
+                <div class="head_r"><a href="javascript:void(0);" id="helpcenter.html">帮助中心</a><em></em><a
+                        href="javascript:void(0);" id="/webPage/invest/phone_jinxin.html" class="phone_jinxin"
+                        style="margin-right:15px;"><i></i>手机客户端</a>
+                    <div class="phone-ewm" style="display:none;">
+                        <a href="javascript:void(0)" class="phone_jinxin"><i></i>手机客户端</a>
+                        <div class="phone-ewm-dropdown">
+                            <span><img th:src="@{|/images/phone_jinxin_ewm.png|}" alt=""></span>
+                            <p>下载动力宝APP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headCnt clearfix">
+            <div class="logo"><a href="${#httpServletRequest.getContextPath()}"><img th:src="@{|/images/logo.jpg|}"></a>
+            </div>
+            <ul class="main-nav">
+                <li><h2><a id="jinxin" href="${#httpServletRequest.getContextPath()}">首页<i></i></a></h2></li>
+                <!--current为当前状态-->
+                <li>
+                    <h2><a id="wytz" href="${#httpServletRequest.getContextPath()}/loan/loan">我要投资<i></i></a></h2>
+                    <div class="menu-drop" style="display:none;">
+                        <a href="${#httpServletRequest.getContextPath()}/loan/loan?ptype=1">优选类产品</a>
+                        <a href="${#httpServletRequest.getContextPath()}/loan/loan?ptype=2">散标类产品</a>
+                    </div>
+                </li>
+                <li><h2><a id="borrowers" href="javascript:void(0);" class="/loan/borrower">借款人信息<i></i></a></h2></li>
+                <li><h2><a id="information" href="javascript:void(0);"
+                           class="/webPage/newInfoDisclosure/company-profile.htm">信息披露<i></i></a></h2></li>
+                <li><h2><a id="insurance" href="javascript:void(0);"
+                           class="/webPage/index/insurance.html">安全计划<i></i></a></h2></li>
+            </ul>
+            <div class="login-right">
+                <c:choose>
+                    <c:when test="${empty user}">
+                        <!-- 未登录start -->
+                        <div class="no-login"><a href="${#httpServletRequest.getContextPath()}/register.jsp"
+                                                 class="btn-reg">注册</a><a
+                                href="${#httpServletRequest.getContextPath()}/login.jsp" class="btn-login">登录</a></div>
+                        <!-- 未登录end -->
+                    </c:when>
+                    <c:otherwise>
+
+                        <!--登录后begin-->
+                        <div class="logged">
+                            <div class="userinfo-up">
+                                <a href="loan/myCenter" class="user-phone">${user.phone}</a><a
+                                    href="/webPage/account/member_systems.html" class="user-vip"
+                                    id="member">VIP1</a><i></i>
+                            </div>
+                            <div class="userinfo-drop-down" style="height: 0px;">
+                                <div class="down-bk">
+                                    <div class="user-balance">余额：<span id="frame_top">--</span>元</div>
+                                    <ul class="quick-entry clearfix">
+                                        <li class="icon-recharge"><a href="toRecharge.jsp"><i></i><span>充值</span></a>
+                                        </li>
+                                        <li class="icon-invest" style="margin-left:85px;"><a
+                                                href="loan/loan"><i></i><span>投资</span></a></li>
+                                    </ul>
+                                    <div class="enter">进入“<a
+                                            href="/webPage/account/acc.html?mytime=1501046257129">我的小金库</a>”
+                                    </div>
+                                    <div class="exit"><a
+                                            href="${#httpServletRequest.getContextPath()}/loan/logout">退出</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--登录后end-->
+                    </c:otherwise>
+                </c:choose>
+
+            </div>
+        </div>
+    </div>
+    <!--页头end-->
+
+    <!--二维码弹出层start-->
+    <div id="ewm" class="ewm_layer" style="display:none;">
+        <a href="javascript:void(0)" class="close"></a>
+        <div class="ewm_weixin">
+            <!--<h3>动力网服务号</h3>-->
+            <!--<h4>更多服务请关注动力网服务号</h4>-->
+            <!--<div class="ewm"><img src="images/ewm_fwh.jpg" alt="动力网服务号"></div>-->
+        </div>
+        <div class="ewm_weixin">
+            <!--<h3>动力网订阅号</h3>-->
+            <!--<h4>获取动力网最新资讯</h4>-->
+            <!--<div class="ewm"><img src="images/ewm_dyh.jpg" alt="动力网订阅号"></div>-->
+        </div>
+    </div>
+    <!-- 二维码弹出层end -->
+</div>
+<!--footer-->
+<div th:fragment="footer">
+    <div class="footer">
+        <div class="friendship-link">
+            <div class="mainBox clearfix">
+                <div class="friendship">友情链接</div>
+                <div class="links-list">
+                    <ul>
+                        <li><a href="http://bank.jrj.com.cn/" target="_blank">金融界</a></li>
+                        <li><a href="http://iof.hexun.com/" target="_blank">和讯网金</a></li>
+                        <li><a href="http://www.p2peye.com/ " target="_blank" rel="nofollow">网贷天眼</a></li>
+                        <li><a href="http://www.wdzj.com" target="_blank" rel="nofollow">网贷之家</a></li>
+                        <li><a href="http://p2p.hexun.com/" target="_blank" rel="nofollow">和讯P2P</a></li>
+                        <li><a href="http://www.wangdaicaifu.com/ " target="_blank" rel="nofollow">网贷财富</a></li>
+                        <li><a href="https://www.weicaifu.com " target="_blank" rel="nofollow">微财富理财</a></li>
+                        <li><a href="http://www.jnlc.com" target="_blank" rel="nofollow">金牛理财网</a></li>
+                        <li><a href="http://finance.caijing.com.cn/index.html" target="_blank">财经网</a></li>
+                        <li><a href="http://www.rong360.com/beijing/" target="_blank">北京贷款</a></li>
+                    </ul>
+                </div>
+                <div class="links-down" id="links-down"><i></i></div>
+            </div>
+        </div>
+        <div class="mainBox">
+            <div class="homeWap">
+                <div class="footer-section clearfix">
+                    <div class="footer-links">
+                        <h3>关于动力</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)">关于我们</a></li>
+                            <li><a href="javascript:void(0)" rel="nofollow">媒体报道</a></li>
+                            <li><a href="javascript:void(0)" rel="nofollow">官方公告</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>新手帮助</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)" rel="nofollow">新手指引</a></li>
+                            <li><a href="${#httpServletRequest.getContextPath()}/loan/loan">产品介绍</a></li>
+                            <li><a href="javascript:void(0)">常见问题</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>平台安全</h3>
+                        <ul>
+                            <li><a href="/webPage/index/insurance.html" rel="nofollow">安全计划</a></li>
+                            <li><a href="javascript:void(0)" rel="nofollow">隐私保护</a></li>
+                            <li><a href="javascript:void(0)" rel="nofollow">政策法规</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contactus">
+                        <h3>联系我们</h3>
+                        <p>工作时间： 周一至周日9:00 - 21:00</p>
+                        <p class="tel">400-800-0105</p>
+                        <p>客服邮箱：<a style="cursor:pointer;" onclick="location.href='mailto:kefu@bjpowernode.com'">kefu@bjpowernode.com</a>
+                        </p>
+                    </div>
+                    <div class="footer-ewm">
+                        <img th:src="@{|/images/weixin01.png|}" alt="动力金融网订阅号"/>
+                        <p>动力金融网订阅号</p>
+                    </div>
+                    <div class="footer-ewm">
+                        <img th:src="@{|/images/weixin02.png|}" alt="动力金融网服务号"/>
+                        <p>动力金融网服务号</p>
+                    </div>
+                </div>
+                <div class="copyright">版权所有 ©2017 北京动力节点教育科技有限公司 京ICP备09027468号 | <img th:src="@{|/images/jinghui.png|}"
+                                                                                       alt="京公网安备"/>京公网安备11030808027468
+                </div>
+                <div class="certification-body">
+                    <a href="http://webscan.360.cn/index/checkwebsite/url/www.powernode.com" target="_blank"
+                       rel="nofollow" class="certification-1"></a>
+                    <a href="http://www.itrust.org.cn/home/index/wx_certifi/wm/WX2017012201.html?from=singlemessage&isappinstalled=1"
+                       target="_blank" rel="nofollow" class="certification-2"></a>
+                    <a href="http://www.315online.com.cn/member/315140023.html" target="_blank" rel="nofollow"
+                       class="certification-3"></a>
+                    <a href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.powernode.com&amp;lang=zh_cn"
+                       target="_blank" rel="nofollow" class="certification-4"></a>
+                    <a href="http://webverify.cfca.com.cn/WebVerify/webVerifyServlet?domain=www.powernode.com"
+                       target="_blank" rel="nofollow" class="certification-5"></a>
+                    <a href="http://www.anquan.org/authenticate/cert/?site=www.powernode.com&amp;at=realname"
+                       target="_blank" rel="nofollow" class="certification-8"></a>
+                </div>
+            </div>
+        </div>
+        <!--温馨提示begin-->
+        <div class="footer-hint">
+            <div class="footer-hint-bg"></div>
+            <div class="footer-hint-text">温馨提示：投资有风险，选择需谨慎，历史、预测收益不代表实际收益。</div>
+        </div>
+        <!--温馨提示end-->
+    </div>
+</div>
+</html>
