@@ -2,7 +2,6 @@ package com.alag.p2p.business.module.web.server.controller;
 
 
 import com.alag.p2p.business.core.common.constant.Constants;
-import com.alag.p2p.business.core.common.response.ServerResponse;
 import com.alag.p2p.business.module.bid.feign.controller.BidFeignService;
 import com.alag.p2p.business.module.loan.api.model.LoanInfo;
 import com.alag.p2p.business.module.loan.feign.controller.LoanFeignService;
@@ -14,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,5 +82,18 @@ public class IndexServerController implements IndexController {
 
 
         return "index";
+    }
+
+    @RequestMapping(value = "logout")
+    @Override
+    public String logout(HttpServletRequest request) {
+
+        //让session失效或者清除指定session中key的值
+        request.getSession().invalidate();
+
+//        request.getSession().removeAttribute(Constants.SESSION_USER);
+        logger.info("logout success!");
+
+        return "redirect:/index";
     }
 }

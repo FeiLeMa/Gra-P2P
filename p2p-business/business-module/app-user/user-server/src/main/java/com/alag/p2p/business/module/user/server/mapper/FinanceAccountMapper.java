@@ -52,4 +52,6 @@ public interface FinanceAccountMapper {
      * @mbggenerated Tue Apr 02 02:28:02 CST 2019
      */
     int updateByPrimaryKey(FinanceAccount record);
+
+    FinanceAccount selectFinanceAccountByUid(Integer id);
 }

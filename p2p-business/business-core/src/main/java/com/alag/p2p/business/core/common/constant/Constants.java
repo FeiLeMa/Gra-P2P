@@ -60,6 +60,10 @@ public class Constants {
      */
     public static final String SUCCESS = "SUCCESS";
 
+    public static final Integer SUCCESSCODE = 0;
+
+    public static final Integer FAILCODE = 1;
+
     /**
      * FAIL
      */

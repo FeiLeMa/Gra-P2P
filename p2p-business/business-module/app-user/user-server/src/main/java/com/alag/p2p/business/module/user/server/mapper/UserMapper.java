@@ -2,6 +2,7 @@ package com.alag.p2p.business.module.user.server.mapper;
 
 import com.alag.p2p.business.module.user.api.model.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserMapper {
@@ -54,4 +55,8 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     Long selectAllUserCount();
+
+    User selectUserByPhone(String phone);
+
+    User selectUserByPhoneAndLoginPassword(@Param("phone") String phone, @Param("loginPassword") String loginPassword);
 }
