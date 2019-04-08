@@ -710,12 +710,12 @@
       <workItem from="1554232759704" duration="20367000" />
       <workItem from="1554256423732" duration="8823000" />
       <workItem from="1554427247116" duration="8297000" />
-      <workItem from="1554682157949" duration="2143000" />
+      <workItem from="1554682157949" duration="2416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93885000" />
+    <option name="totallyTimeSpent" value="94158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,9 +728,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972826" visible="true" weight="0.28271407" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972826" visible="true" weight="0.28271407" />
       <window_info id="Structure" order="1" sideWeight="0.5025381" side_tool="true" weight="0.31502423" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -746,7 +745,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286385" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3286385" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21439749" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21439749" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286385" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
