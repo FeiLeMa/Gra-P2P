@@ -43,4 +43,16 @@ public class LoanInfoServiceImpl implements LoanInfoService {
     public List<LoanInfo> getListByPType(Map<String, Object> paramMap) {
         return loanInfoMapper.selectLoanInfoByPage(paramMap);
     }
+
+    @Override
+    public List<LoanInfo> getAllByType(Integer pType) {
+        return loanInfoMapper.selectAllByType(pType);
+    }
+
+    @Override
+    public LoanInfo getLoanInfoById(Integer loanId) {
+        return loanInfoMapper.selectByPrimaryKey(loanId);
+    }
+
+
 }

@@ -2,6 +2,9 @@ package com.alag.p2p.business.module.bid.server.mapper;
 
 import com.alag.p2p.business.module.bid.api.model.BidInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 @Mapper
 public interface BidInfoMapper {
@@ -54,4 +57,6 @@ public interface BidInfoMapper {
     int updateByPrimaryKey(BidInfo record);
 
     Double selectAllBidMoney();
+
+    List<BidInfo> selectAllBidInfoByLoanId(@Param("loanId") Integer loanId);
 }

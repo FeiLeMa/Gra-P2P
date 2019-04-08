@@ -310,4 +310,14 @@
         release_time desc
         limit #{currentPage},#{pageSize}
     </select>
+    <select id="selectAllByType" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        b_loan_info
+        where
+        product_type = #{pType}
+        order by
+        release_time desc
+    </select>
 </mapper>

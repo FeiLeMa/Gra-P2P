@@ -46,8 +46,8 @@ public class UserServerController implements UserController {
         logger.info("Receiving phone is " + phone);
 
         if (!StringUtils.isEmpty(phone) && Pattern.matches("^1[1-9]\\d{9}$", phone)) {
-            int ret = userService.getUserByPhone(phone);
-            return ret != 0 ? ServerResponse.createByErrorMessage("手机号码已被注册") : ServerResponse.createBySuccessMessage("OK");
+            User ret = userService.getUserByPhone(phone);
+            return ret != null ? ServerResponse.createByErrorMessage("手机号码已被注册") : ServerResponse.createBySuccessMessage("OK");
         }
 
         return ServerResponse.createByErrorMessage("手机号码格式不对");
@@ -152,6 +152,9 @@ public class UserServerController implements UserController {
                 userSession.setName(realName);
                 userSession.setIdCard(idCard);
                 int retV = userService.updateInfo(userSession);
+                if (retV == 0){
+                    return ServerResponse.createByErrorMessage("系统繁忙");
+                }
 
             } else {
                 return ServerResponse.createByErrorMessage("身份信息有误");
@@ -176,9 +179,9 @@ public class UserServerController implements UserController {
         return ServerResponse.createBySuccess(userInfo);
     }
 
-    @GetMapping("myFinanceAccount")
+    @GetMapping("queryFinanceAccountById")
     @Override
-    public ServerResponse<FinanceAccount> myFinanceAccount(HttpServletRequest request) {
+    public ServerResponse<FinanceAccount> queryFinanceAccount(HttpServletRequest request) {
 
         User sessionUser = (User) request.getSession().getAttribute(Constants.SESSION_USER);
         if (null == sessionUser) {
@@ -215,6 +218,29 @@ public class UserServerController implements UserController {
         request.getSession().setAttribute(Constants.SESSION_USER, user);
 
         return ServerResponse.createBySuccess("OK");
+    }
+
+    @PostMapping("getUserByPhone")
+    @Override
+    public ServerResponse<User> getUserByPhone(String phone) {
+        //验证手机号码格式
+        if (!Pattern.matches("^1[1-9]\\d{9}$", phone)) {
+            return ServerResponse.createByErrorMessage("用户手机号码格式不对");
+        }
+
+        User user = userService.getUserByPhone(phone);
+        return ServerResponse.createBySuccess(user);
+    }
+
+    @PutMapping("modifyUserById")
+    @Override
+    public ServerResponse modifyUserById(@RequestBody User user) {
+        int ret = userService.updateInfo(user);
+        if (ret > 0){
+            return ServerResponse.createBySuccess("用户更新成功");
+        }
+
+        return ServerResponse.createByErrorMessage("用户更新失败");
     }
 
 }

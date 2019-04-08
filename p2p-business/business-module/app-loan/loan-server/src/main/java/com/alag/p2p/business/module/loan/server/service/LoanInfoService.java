@@ -11,4 +11,8 @@ public interface LoanInfoService {
     Double getHisAvgRate();
 
     List<LoanInfo> getListByPType(Map<String, Object> paramMap);
+
+    List<LoanInfo> getAllByType(Integer pType);
+
+    LoanInfo getLoanInfoById(Integer loanId);
 }

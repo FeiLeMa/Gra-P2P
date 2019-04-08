@@ -46,11 +46,9 @@ public class UserServiceimpl implements UserService {
     }
 
     @Override
-    public int getUserByPhone(String phone) {
-        if (null == userMapper.selectUserByPhone(phone)) {
-            return 0;
-        }
-        return 1;
+    public User getUserByPhone(String phone) {
+        User user = userMapper.selectUserByPhone(phone);
+        return user;
     }
 
     @Transactional

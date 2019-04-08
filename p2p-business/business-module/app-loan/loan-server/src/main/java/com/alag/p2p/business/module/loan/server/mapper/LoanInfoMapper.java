@@ -2,6 +2,7 @@ package com.alag.p2p.business.module.loan.server.mapper;
 
 import com.alag.p2p.business.module.loan.api.model.LoanInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -67,4 +68,6 @@ public interface LoanInfoMapper {
     Double selectHistoryAverageRate();
 
     List<LoanInfo> selectLoanInfoByPage(Map<String, Object> paramMap);
+
+    List<LoanInfo> selectAllByType(@Param("pType") Integer pType);
 }

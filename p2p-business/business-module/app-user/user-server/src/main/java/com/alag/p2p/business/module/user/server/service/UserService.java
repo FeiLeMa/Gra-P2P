@@ -7,7 +7,7 @@ import com.alag.p2p.business.module.user.api.model.User;
 public interface UserService {
     Long getAUserCount();
 
-    int getUserByPhone(String phone);
+    User getUserByPhone(String phone);
 
     ServerResponse register(String phone, String passwd);
 

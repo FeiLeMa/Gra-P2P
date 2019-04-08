@@ -83,4 +83,25 @@ public class Constants {
      * 唯一数字
      */
     public static final String ONLY_NUMBER = "onlyNumber";
+
+    /**
+     * 总记录条数
+     */
+    public static final String TOTAL_ROWS = "totalRows";
+
+    /**
+     * 总页数
+     */
+    public static final String TOTAL_PAGE = "totalPage";
+
+    /**
+     * loanlist
+     */
+    public static final String LOANINFO_LIST = "loanInfoList";
+
+    /**
+     * 当前页码
+     */
+    public static final String CURRENT_PAGE = "currentPage";
+
 }
