@@ -3,6 +3,8 @@ package com.alag.p2p.business.module.user.server.mapper;
 import com.alag.p2p.business.module.user.api.model.FinanceAccount;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Map;
+
 @Mapper
 public interface FinanceAccountMapper {
     /**
@@ -54,4 +56,6 @@ public interface FinanceAccountMapper {
     int updateByPrimaryKey(FinanceAccount record);
 
     FinanceAccount selectFinanceAccountByUid(Integer id);
+
+    int updateFinanceAccountByBid(Map<String, Object> paramMap);
 }

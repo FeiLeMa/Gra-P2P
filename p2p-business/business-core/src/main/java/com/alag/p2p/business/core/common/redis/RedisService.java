@@ -196,6 +196,11 @@ public class RedisService {
 		zset.add(key, value, scoure);
 	}
 
+	public void zIncrementScore(String key,Object value,double score){
+
+		redisTemplate.opsForZSet().incrementScore(key,value,score);
+	}
+
 	/**
 	 * 有序集合获取
 	 * 

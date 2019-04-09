@@ -1,6 +1,7 @@
 package com.alag.p2p.business.module.loan.server.service;
 
 
+import com.alag.p2p.business.core.common.response.ServerResponse;
 import com.alag.p2p.business.module.loan.api.model.LoanInfo;
 
 import java.util.List;
@@ -14,5 +15,9 @@ public interface LoanInfoService {
 
     List<LoanInfo> getAllByType(Integer pType);
 
-    LoanInfo getLoanInfoById(Integer loanId);
+    ServerResponse<LoanInfo> getLoanInfoById(Integer loanId);
+
+    ServerResponse updateLPMoneyById(Map paramMap);
+
+    ServerResponse updateLPById(LoanInfo loanInfo);
 }

@@ -17,8 +17,8 @@
       <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/business-module.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/business-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-platform/config-server/config-server.iml" filepath="$PROJECT_DIR$/p2p-platform/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-platform/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/p2p-platform/eureka-server/eureka-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/load-feignClient.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/load-feignClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-api/loan-api.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-api/loan-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/loan-feign.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/load-feignClient/loan-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-server/loan-server.iml" filepath="$PROJECT_DIR$/p2p-business/business-module/app-loan/loan-server/loan-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-platform/mybatis-generate/mybatis-generate.iml" filepath="$PROJECT_DIR$/p2p-platform/mybatis-generate/mybatis-generate.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-business/p2p-business.iml" filepath="$PROJECT_DIR$/p2p-business/p2p-business.iml" />

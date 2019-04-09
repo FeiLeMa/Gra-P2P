@@ -13,8 +13,8 @@
         <module name="business-core" />
         <module name="config-server" />
         <module name="eureka-server" />
-        <module name="load-feignClient" />
         <module name="loan-api" />
+        <module name="loan-feign" />
         <module name="loan-server" />
         <module name="mybatis-generate" />
         <module name="pay-api" />
@@ -30,7 +30,7 @@
         <module name="web-server" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="all-api" target="1.8" />
       <module name="app-bid" target="1.8" />
       <module name="app-loan" target="1.8" />
@@ -47,6 +47,7 @@
       <module name="eureka-server" target="1.8" />
       <module name="load-feignClient" target="1.8" />
       <module name="loan-api" target="1.8" />
+      <module name="loan-feign" target="1.8" />
       <module name="loan-server" target="1.8" />
       <module name="mybatis-generate" target="1.5" />
       <module name="p2p-business" target="1.8" />

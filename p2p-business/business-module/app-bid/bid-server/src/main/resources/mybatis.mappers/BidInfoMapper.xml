@@ -156,4 +156,14 @@
         b_bid_info
         where loan_id = #{loanId}
     </select>
+    <!--更新产品的剩余可投金额-->
+    <update id="updateLeftProductMoneyByLoanId">
+    update
+    b_loan_info
+    set
+    left_product_money = left_product_money - #{bidMoney},
+    version = version+1
+    where
+    id = #{loanId} and version = #{version} and (left_product_money - #{bidMoney}) >= 0
+    </update>
 </mapper>

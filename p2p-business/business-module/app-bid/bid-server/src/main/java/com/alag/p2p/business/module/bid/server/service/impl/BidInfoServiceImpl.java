@@ -2,6 +2,7 @@ package com.alag.p2p.business.module.bid.server.service.impl;
 
 import com.alag.p2p.business.core.common.constant.Constants;
 import com.alag.p2p.business.core.common.redis.RedisService;
+import com.alag.p2p.business.core.common.response.ServerResponse;
 import com.alag.p2p.business.core.common.tools.ObjToOne;
 import com.alag.p2p.business.module.bid.api.model.BidInfo;
 import com.alag.p2p.business.module.bid.server.mapper.BidInfoMapper;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class BidInfoServiceImpl implements BidInfoService {
@@ -42,5 +44,15 @@ public class BidInfoServiceImpl implements BidInfoService {
     public List<BidInfo> getBidInfoByLoanId(Integer loanId) {
 
         return bidInfoMapper.selectAllBidInfoByLoanId(loanId);
+    }
+
+
+    @Override
+    public ServerResponse insertBidInfo(BidInfo bidInfo) {
+        int mRet = bidInfoMapper.insertSelective(bidInfo);
+        if (mRet > 0 ){
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
     }
 }

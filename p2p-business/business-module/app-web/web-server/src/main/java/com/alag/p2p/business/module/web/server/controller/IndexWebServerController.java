@@ -21,9 +21,9 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class IndexServerController implements IndexWebController {
+public class IndexWebServerController implements IndexWebController {
 
-    private Logger logger = LogManager.getLogger(IndexServerController.class);
+    private Logger logger = LogManager.getLogger(IndexWebServerController.class);
     @Autowired
     private LoanFeignService loanFeignService;
     @Autowired

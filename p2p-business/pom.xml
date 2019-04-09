@@ -26,6 +26,17 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.data</groupId>
+                    <artifactId>spring-data-redis</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!-- spring boot 整合eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

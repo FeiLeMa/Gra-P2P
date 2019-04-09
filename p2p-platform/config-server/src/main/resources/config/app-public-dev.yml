@@ -20,7 +20,10 @@ logging:
 #tx-lcn:
 #  client:
 #    manager-address: 127.0.0.1:8070
+
 spring:
+  session:
+    store-type: redis
   redis:
     database: 0
     host: localhost

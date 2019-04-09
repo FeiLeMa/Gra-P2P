@@ -243,4 +243,12 @@ public class UserServerController implements UserController {
         return ServerResponse.createByErrorMessage("用户更新失败");
     }
 
+    @PutMapping("updateFinanceAccountByBid")
+    @Override
+    public ServerResponse updateFinanceAccountByBid(@RequestBody Map<String, Object> paramMap) {
+
+
+        return userService.updateFAById(paramMap);
+    }
+
 }

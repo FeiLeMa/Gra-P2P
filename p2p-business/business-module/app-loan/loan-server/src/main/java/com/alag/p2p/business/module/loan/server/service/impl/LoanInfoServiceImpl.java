@@ -2,6 +2,7 @@ package com.alag.p2p.business.module.loan.server.service.impl;
 
 import com.alag.p2p.business.core.common.constant.Constants;
 import com.alag.p2p.business.core.common.redis.RedisService;
+import com.alag.p2p.business.core.common.response.ServerResponse;
 import com.alag.p2p.business.core.common.tools.ObjToOne;
 import com.alag.p2p.business.module.loan.api.model.LoanInfo;
 import com.alag.p2p.business.module.loan.server.mapper.LoanInfoMapper;
@@ -36,7 +37,7 @@ public class LoanInfoServiceImpl implements LoanInfoService {
 
         }
 
-        return objV==null?historyAverageRate:ObjToOne.objToDouble(objV);
+        return objV == null ? historyAverageRate : ObjToOne.objToDouble(objV);
     }
 
     @Override
@@ -50,8 +51,26 @@ public class LoanInfoServiceImpl implements LoanInfoService {
     }
 
     @Override
-    public LoanInfo getLoanInfoById(Integer loanId) {
-        return loanInfoMapper.selectByPrimaryKey(loanId);
+    public ServerResponse<LoanInfo> getLoanInfoById(Integer loanId) {
+        return ServerResponse.createBySuccess(loanInfoMapper.selectByPrimaryKey(loanId));
+    }
+
+    @Override
+    public ServerResponse updateLPMoneyById(Map paramMap) {
+        int updateLeftProductMoney = loanInfoMapper.updateLeftProductMoneyByLoanId(paramMap);
+        if (updateLeftProductMoney == 0) {
+            return ServerResponse.createByErrorMessage("投资失败，修改剩余产品剩余可投金额失败");
+        }
+        return ServerResponse.createBySuccessMessage("修改剩余产品可投金额成功");
+    }
+
+    @Override
+    public ServerResponse updateLPById(LoanInfo loanInfo) {
+        int mRet = loanInfoMapper.updateByPrimaryKeySelective(loanInfo);
+        if (mRet > 0) {
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
     }
 
 

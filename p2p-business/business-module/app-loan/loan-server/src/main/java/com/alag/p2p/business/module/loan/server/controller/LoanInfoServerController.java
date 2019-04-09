@@ -96,7 +96,7 @@ public class LoanInfoServerController implements LoanInfoController {
     public ServerResponse<Map<String, Object>> loanInfo(HttpServletRequest request, @Param("loanId") Integer loanId) {
 
         logger.info("loanInfoId => " + loanId);
-        LoanInfo loanInfo = loanInfoService.getLoanInfoById(loanId);
+        ServerResponse<LoanInfo> loanInfo = loanInfoService.getLoanInfoById(loanId);
 
         List<BidInfo> bidInfoList = bidFeignService.queryBidInfoByLoanId(loanId).getData();
 
@@ -105,7 +105,7 @@ public class LoanInfoServerController implements LoanInfoController {
 
         Map<String, Object> retMap = new HashMap<>();
 
-        retMap.put("loanInfo", loanInfo);
+        retMap.put("loanInfo", loanInfo.getData());
         retMap.put("bidInfoList", bidInfoList);
 
 
@@ -118,5 +118,24 @@ public class LoanInfoServerController implements LoanInfoController {
         }
 
         return ServerResponse.createBySuccess(retMap);
+    }
+
+    @RequestMapping("queryLoanById")
+    @Override
+    public ServerResponse<LoanInfo> queryLoanById(@RequestParam Integer loanId) {
+        logger.info("loanId => " + loanId);
+        return loanInfoService.getLoanInfoById(loanId);
+    }
+
+    @PostMapping("modifyLeftProductMoneyByLoanId")
+    @Override
+    public ServerResponse modifyLeftProductMoneyByLoanId(@RequestBody Map paramMap) {
+
+        return loanInfoService.updateLPMoneyById(paramMap);
+    }
+
+    @Override
+    public ServerResponse updateSelectiveById(LoanInfo loanInfo) {
+        return loanInfoService.updateLPById(loanInfo);
     }
 }

@@ -70,4 +70,6 @@ public interface LoanInfoMapper {
     List<LoanInfo> selectLoanInfoByPage(Map<String, Object> paramMap);
 
     List<LoanInfo> selectAllByType(@Param("pType") Integer pType);
+
+    int updateLeftProductMoneyByLoanId(Map paramMap);
 }

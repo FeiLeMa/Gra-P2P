@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.Map;
 
 @RequestMapping("p2p/user")
 public interface UserController {
@@ -104,4 +105,8 @@ public interface UserController {
      */
     @PutMapping("modifyUserById")
     ServerResponse modifyUserById(User user);
+
+    @PutMapping("updateFinanceAccountByBid")
+    ServerResponse updateFinanceAccountByBid(@RequestBody Map<String, Object> paramMap);
+
 }

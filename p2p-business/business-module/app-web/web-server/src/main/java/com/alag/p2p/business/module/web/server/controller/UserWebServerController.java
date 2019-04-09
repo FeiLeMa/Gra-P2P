@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("p2p/webUser")
-public class UserServerController implements UserWebController {
+public class UserWebServerController implements UserWebController {
 
-    public static final Logger logger = LogManager.getLogger(UserServerController.class);
+    public static final Logger logger = LogManager.getLogger(UserWebServerController.class);
     private UserFeignService userFeignService;
 
     @RequestMapping("logout")
@@ -34,7 +34,7 @@ public class UserServerController implements UserWebController {
     @RequestMapping("myCenter")
     @Override
     public String myCenter(HttpServletRequest request,Model model) {
-        FinanceAccount financeAccount = userFeignService.myFinanceAccount(request).getData();
+        FinanceAccount financeAccount = userFeignService.queryFinanceAccount(request).getData();
         model.addAttribute("financeAccount", financeAccount);
 
         return "myCenter";

@@ -24,4 +24,13 @@ public interface LoanInfoController {
 
     @GetMapping("loanInfo")
     ServerResponse<Map<String, Object>> loanInfo(HttpServletRequest request, @RequestParam("loanId") Integer loanId);
+
+    @RequestMapping("queryLoanById")
+    ServerResponse<LoanInfo> queryLoanById(@RequestParam("loanId") Integer loanId);
+
+    @PostMapping("modifyLeftProductMoneyByLoanId")
+    ServerResponse modifyLeftProductMoneyByLoanId(@RequestBody Map paramMap);
+
+    @PutMapping("updateSelectiveById")
+    ServerResponse updateSelectiveById(@RequestBody LoanInfo loanInfo);
 }

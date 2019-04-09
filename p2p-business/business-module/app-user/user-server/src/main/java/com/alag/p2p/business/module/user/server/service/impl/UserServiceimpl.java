@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.Map;
 
 @Service
 public class UserServiceimpl implements UserService {
@@ -114,6 +115,16 @@ public class UserServiceimpl implements UserService {
         }
 
         return user;
+    }
+
+    @Override
+    public ServerResponse updateFAById(Map<String, Object> paramMap) {
+        int mRet = financeAccountMapper.updateFinanceAccountByBid(paramMap);
+        if (mRet > 0 ){
+            return ServerResponse.createBySuccess();
+        }
+
+        return ServerResponse.createByError();
     }
 
 

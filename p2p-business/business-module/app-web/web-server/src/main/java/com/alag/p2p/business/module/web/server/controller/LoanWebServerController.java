@@ -19,7 +19,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("p2p/webLoan")
-public class LoanServerController implements LoanWebController {
+public class LoanWebServerController implements LoanWebController {
 
     @Autowired
     private LoanFeignService loanFeignService;
