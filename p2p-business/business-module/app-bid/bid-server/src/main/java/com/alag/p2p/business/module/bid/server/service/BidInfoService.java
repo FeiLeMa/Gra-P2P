@@ -12,5 +12,5 @@ public interface BidInfoService {
     List<BidInfo> getBidInfoByLoanId(Integer bidInfoId);
 
 
-    ServerResponse insertBidInfo(BidInfo bidInfo);
+    ServerResponse userInvest(Map<String, Object> paramMap);
 }

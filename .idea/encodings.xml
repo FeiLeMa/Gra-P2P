@@ -31,5 +31,6 @@
     <file url="file://$PROJECT_DIR$/p2p-platform" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/p2p-platform/config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/p2p-platform/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/p2p-platform/txlcn-tm" charset="UTF-8" />
   </component>
 </project>

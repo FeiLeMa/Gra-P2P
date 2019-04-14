@@ -22,4 +22,5 @@ public interface BidInfoController {
 
     @PostMapping("invest")
     ServerResponse invest(Map<String, Object> paramMap);
+
 }

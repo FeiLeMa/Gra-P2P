@@ -11,5 +11,23 @@
 
     <artifactId>timer-server</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.alag.p2p.business</groupId>
+            <artifactId>all-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!--Druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <!--springboot 整合的Mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+    </dependencies>
 </project>

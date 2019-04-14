@@ -33,4 +33,7 @@ public interface LoanInfoController {
 
     @PutMapping("updateSelectiveById")
     ServerResponse updateSelectiveById(@RequestBody LoanInfo loanInfo);
+
+    @GetMapping("selectLoanInfoByProductStatus")
+    ServerResponse<List<LoanInfo>> selectLoanInfoByProductStatus(@RequestParam("i") int i);
 }

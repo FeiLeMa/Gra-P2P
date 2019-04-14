@@ -58,4 +58,6 @@ public interface FinanceAccountMapper {
     FinanceAccount selectFinanceAccountByUid(Integer id);
 
     int updateFinanceAccountByBid(Map<String, Object> paramMap);
+
+    int updateFinanceAccountByIncomeBack(Map<String, Object> paramMap);
 }

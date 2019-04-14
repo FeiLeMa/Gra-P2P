@@ -15,6 +15,7 @@ import org.apache.http.util.EntityUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -249,6 +250,12 @@ public class UserServerController implements UserController {
 
 
         return userService.updateFAById(paramMap);
+    }
+
+    @PostMapping("updateFinanceAccountByIncomeBack")
+    @Override
+    public ServerResponse updateFinanceAccountByIncomeBack(@RequestBody Map<String, Object> paramMap) {
+        return userService.updateFAByIncomeBack(paramMap);
     }
 
 }

@@ -72,4 +72,6 @@ public interface LoanInfoMapper {
     List<LoanInfo> selectAllByType(@Param("pType") Integer pType);
 
     int updateLeftProductMoneyByLoanId(Map paramMap);
+
+    List<LoanInfo> selectLoanInfoByProductStatus(@Param("productStatus") int i);
 }

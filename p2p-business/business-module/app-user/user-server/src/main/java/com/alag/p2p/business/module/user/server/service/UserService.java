@@ -20,4 +20,6 @@ public interface UserService {
     User login(String phone, String loginPassword);
 
     ServerResponse updateFAById(Map<String, Object> paramMap);
+
+    ServerResponse updateFAByIncomeBack(Map<String, Object> paramMap);
 }

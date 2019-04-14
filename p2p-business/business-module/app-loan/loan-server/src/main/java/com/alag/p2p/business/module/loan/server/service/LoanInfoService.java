@@ -20,4 +20,6 @@ public interface LoanInfoService {
     ServerResponse updateLPMoneyById(Map paramMap);
 
     ServerResponse updateLPById(LoanInfo loanInfo);
+
+    List<LoanInfo> getListByPStatus(int i);
 }

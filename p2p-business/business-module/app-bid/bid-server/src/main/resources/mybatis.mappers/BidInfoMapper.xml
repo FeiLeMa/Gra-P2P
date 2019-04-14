@@ -103,6 +103,9 @@
             </if>
         </trim>
     </insert>
+
+
+
     <update id="updateByPrimaryKeySelective" parameterType="com.alag.p2p.business.module.bid.api.model.BidInfo">
         <!--
           WARNING - @mbggenerated
@@ -166,4 +169,8 @@
     where
     id = #{loanId} and version = #{version} and (left_product_money - #{bidMoney}) >= 0
     </update>
+    <!--根据收益状态与收益时间获取收益记录-->
+    <select id="selectIncomeRecordByIncomeStatus" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from b_income_record where income_date = curdate() and income_status = #{incomeStatus}
+    </select>
 </mapper>

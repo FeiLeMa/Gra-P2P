@@ -20,9 +20,8 @@
         <module name="pay-api" />
         <module name="pay-feign" />
         <module name="pay-server" />
-        <module name="timer-api" />
-        <module name="timer-feign" />
         <module name="timer-server" />
+        <module name="txlcn-tm" />
         <module name="user-api" />
         <module name="user-feign" />
         <module name="user-server" />
@@ -57,11 +56,17 @@
       <module name="timer-api" target="1.8" />
       <module name="timer-feign" target="1.8" />
       <module name="timer-server" target="1.8" />
+      <module name="txlcn-tm" target="1.8" />
       <module name="user-api" target="1.8" />
       <module name="user-feign" target="1.8" />
       <module name="user-server" target="1.8" />
       <module name="web-api" target="1.8" />
       <module name="web-server" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="txlcn-tm" options="-Xlint:deprecation" />
+    </option>
   </component>
 </project>

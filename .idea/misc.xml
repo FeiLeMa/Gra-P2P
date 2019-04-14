@@ -12,7 +12,14 @@
         <option value="$PROJECT_DIR$/p2p-platform/mybatis-generate/pom.xml" />
         <option value="$PROJECT_DIR$/p2p-platform/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/p2p-business/pom.xml" />
+        <option value="$PROJECT_DIR$/p2p-platform/txlcn-tm/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/p2p-business/business-module/app-timer/timer-feign/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

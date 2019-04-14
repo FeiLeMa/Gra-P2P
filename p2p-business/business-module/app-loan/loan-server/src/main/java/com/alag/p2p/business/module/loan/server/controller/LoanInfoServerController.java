@@ -108,12 +108,13 @@ public class LoanInfoServerController implements LoanInfoController {
         retMap.put("loanInfo", loanInfo.getData());
         retMap.put("bidInfoList", bidInfoList);
 
+        HttpServletRequest req = request;
 
         //判断用户是否登录
         if (null != sessionUser) {
 
             //获取当前用户的帐户可用余额
-            FinanceAccount financeAccount = userFeignService.queryFinanceAccount(request).getData();
+            FinanceAccount financeAccount = userFeignService.queryFinanceAccount(req).getData();
             retMap.put("financeAccount", financeAccount);
         }
 
@@ -135,7 +136,15 @@ public class LoanInfoServerController implements LoanInfoController {
     }
 
     @Override
-    public ServerResponse updateSelectiveById(LoanInfo loanInfo) {
+    public ServerResponse updateSelectiveById(@RequestBody LoanInfo loanInfo) {
         return loanInfoService.updateLPById(loanInfo);
     }
+
+    @Override
+    public ServerResponse<List<LoanInfo>> selectLoanInfoByProductStatus(@RequestParam("i") int i) {
+        logger.info("selectLoanInfoByProductStatus( " + i +" )");
+        List<LoanInfo> loanInfoList = loanInfoService.getListByPStatus(i);
+        return ServerResponse.createBySuccess(loanInfoList);
+    }
+
 }

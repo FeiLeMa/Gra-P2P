@@ -331,4 +331,13 @@
           id = #{loanId} and version = #{version} and (left_product_money - #{bidMoney}) >= 0
 
     </update>
+    <!--根据产品的状态获取产品信息列表-->
+    <select id="selectLoanInfoByProductStatus" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        b_loan_info
+        where
+        product_status = #{productStatus}
+    </select>
 </mapper>

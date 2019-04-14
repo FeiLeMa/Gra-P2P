@@ -109,4 +109,6 @@ public interface UserController {
     @PutMapping("updateFinanceAccountByBid")
     ServerResponse updateFinanceAccountByBid(@RequestBody Map<String, Object> paramMap);
 
+    @PostMapping("updateFinanceAccountByIncomeBack")
+    ServerResponse updateFinanceAccountByIncomeBack(@RequestBody Map<String, Object> paramMap);
 }

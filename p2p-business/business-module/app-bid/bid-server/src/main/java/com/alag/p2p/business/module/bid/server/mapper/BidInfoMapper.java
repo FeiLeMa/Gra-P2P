@@ -59,4 +59,5 @@ public interface BidInfoMapper {
     Double selectAllBidMoney();
 
     List<BidInfo> selectAllBidInfoByLoanId(@Param("loanId") Integer loanId);
+
 }

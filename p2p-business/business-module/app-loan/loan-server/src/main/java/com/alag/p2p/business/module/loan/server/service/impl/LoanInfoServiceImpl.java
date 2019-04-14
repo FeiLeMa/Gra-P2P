@@ -7,8 +7,12 @@ import com.alag.p2p.business.core.common.tools.ObjToOne;
 import com.alag.p2p.business.module.loan.api.model.LoanInfo;
 import com.alag.p2p.business.module.loan.server.mapper.LoanInfoMapper;
 import com.alag.p2p.business.module.loan.server.service.LoanInfoService;
+import com.codingapi.txlcn.tc.annotation.DTXPropagation;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -55,6 +59,7 @@ public class LoanInfoServiceImpl implements LoanInfoService {
         return ServerResponse.createBySuccess(loanInfoMapper.selectByPrimaryKey(loanId));
     }
 
+    @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
     @Override
     public ServerResponse updateLPMoneyById(Map paramMap) {
         int updateLeftProductMoney = loanInfoMapper.updateLeftProductMoneyByLoanId(paramMap);
@@ -64,6 +69,7 @@ public class LoanInfoServiceImpl implements LoanInfoService {
         return ServerResponse.createBySuccessMessage("修改剩余产品可投金额成功");
     }
 
+    @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
     @Override
     public ServerResponse updateLPById(LoanInfo loanInfo) {
         int mRet = loanInfoMapper.updateByPrimaryKeySelective(loanInfo);
@@ -71,6 +77,11 @@ public class LoanInfoServiceImpl implements LoanInfoService {
             return ServerResponse.createBySuccess();
         }
         return ServerResponse.createByError();
+    }
+
+    @Override
+    public List<LoanInfo> getListByPStatus(int i) {
+        return loanInfoMapper.selectLoanInfoByProductStatus(i);
     }
 
 

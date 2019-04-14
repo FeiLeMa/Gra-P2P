@@ -10,6 +10,9 @@ import com.alag.p2p.business.module.user.api.model.User;
 import com.alag.p2p.business.module.user.server.mapper.FinanceAccountMapper;
 import com.alag.p2p.business.module.user.server.mapper.UserMapper;
 import com.alag.p2p.business.module.user.server.service.UserService;
+import com.codingapi.txlcn.tc.annotation.DTXPropagation;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import org.apache.catalina.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -75,7 +78,6 @@ public class UserServiceimpl implements UserService {
             financeAccount.setUid(userInfo.getId());
             financeAccount.setAvailableMoney(888.0);
             int insertFinanceCount = financeAccountMapper.insertSelective(financeAccount);
-
             if (insertFinanceCount < 0) {
                 return ServerResponse.createByErrorMessage("注册失败");
             }
@@ -117,9 +119,23 @@ public class UserServiceimpl implements UserService {
         return user;
     }
 
+    @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
     @Override
     public ServerResponse updateFAById(Map<String, Object> paramMap) {
         int mRet = financeAccountMapper.updateFinanceAccountByBid(paramMap);
+        if (mRet > 0 ){
+            return ServerResponse.createBySuccess();
+        }
+
+        return ServerResponse.createByError();
+    }
+
+
+
+    @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
+    @Override
+    public ServerResponse updateFAByIncomeBack(Map<String, Object> paramMap) {
+        int mRet = financeAccountMapper.updateFinanceAccountByIncomeBack(paramMap);
         if (mRet > 0 ){
             return ServerResponse.createBySuccess();
         }
